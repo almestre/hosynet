@@ -8,8 +8,7 @@ Alexandre Mestre
 ## Aims
 This repository was developed as part of a research line focused on disentangling the drivers of freshwater host-symbiont interaction communities, using American crayfish-ostracod associations. The results of this research are shown in an ongoing SCI paper:
 
-Mestre A, Mesquita-Joanes F, and Peres-Neto PR (2014). Habitat specialization of crayfish drives
-specialization in host usage by their ostracod symbionts (In prep.)
+Mestre A, Mesquita-Joanes F, and Peres-Neto PR (2014). Habitat specialization of crayfish drives specialization in host usage by their ostracod symbionts (In prep.)
 
 ## 1_create_null_models.m
 
@@ -46,6 +45,7 @@ The script requires the previous execution of the following Matlab scripts (in t
 
 ### Methods
 It uses the CHAMP package to create an ensemble of partitions that can be used to identify the partition with the largest domain of optimisation based on a graphical approach described in:
+
 Weir et al. (2017). Post-Processing Partitions to Identify Domains of Modularity Optimization. Algorithms, 10:93.
 
 The plot to identify the best partition can be obtained with the following script that processes the ensemble created in this script: 'plot_bestg.py'

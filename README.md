@@ -10,12 +10,14 @@ This repository was developed as part of a research line focused on disentanglin
 
 Mestre A, Mesquita-Joanes F, and Peres-Neto PR (2014). Habitat specialization of crayfish drives specialization in host usage by their ostracod symbionts (In prep.)
 
-## 1_create_null_models.m
+## List of functions and scripts
 
-### Description
+### 1_create_null_models.m
+
+#### Description
 Matlab script that creates the null models for the analysis of the modularity of a bipartite interaction network (e.g., characterising symbiont-host associations).
 
-### Methods
+#### Methods
 Number of null models = 999
 The null models are randomised versions of an MxN adjacency matrix for an undirected bipartite network
 Type of null model = fixed null model

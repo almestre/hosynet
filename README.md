@@ -285,7 +285,7 @@ For the geo-corrected version, we use the option 'taxa.labels' for the null mode
 
 #### Parameters
 matrix: MxN incidence matrix where M (i.e. rows) represent species of level one (e.g. hosts), and N (i.e. cols) reperesent species of the level 2 (e.g. symbionts).
-# dist_matrix: matrix of pairwise functional distances ("as.matrix" format).
+dist_matrix: matrix of pairwise functional distances ("as.matrix" format).
 partition: vector that stores the identities of the interaction modules for the species belonging to the target level (either level 1 or 2)
 geo_partition: vector that stores the identities of the geographic modules for species belonging to the target level (either level 1 or 2). If geo_partition = NA, then standard nri is provided instead of a geo-corrected version.
 level: If level = 1, we will obtain the nri for species of level 1 (i.e rows of the incidence matrix); if level = 2, we obtain nri for species of level 2 (columns the incidence matrix). 

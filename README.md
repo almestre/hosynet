@@ -12,9 +12,8 @@ Mestre A, Mesquita-Joanes F, and Peres-Neto PR (2014). Habitat specialization of
 
 ## List of functions and scripts
 
-###########################
 ### 1_create_null_models.m
-###########################
+#################################################################################################################
 
 #### Description
 Matlab script that creates the null models for the analysis of the modularity of a bipartite interaction network (e.g., characterising symbiont-host associations).
@@ -30,12 +29,14 @@ Matlab function swap.m written by B. Semmens
 
 
 ### 2_create_network_partitions.m
+#################################################################################################################
 
 #### Description
 Matlab script that creates a set of network partitions from an MxN adjacency matrix (called A), covering a representative range of gamma values.
 The MxN adjacency matrix of symbiont-host associations
 
 ### 3_estimate_best_gamma.py
+#################################################################################################################
 
 #### Description
 Python script to estimate the best gamma parameter for the modularity of a bipartite network. 
@@ -55,6 +56,7 @@ Weir et al. (2017). Post-Processing Partitions to Identify Domains of Modularity
 The plot to identify the best partition can be obtained with the following script that processes the ensemble created in this script: 'plot_bestg.py'
 
 ### modularity_test.m
+#################################################################################################################
 
 #### Description
 Matlab script that calculates an optimised partition for a bipartite network using the 'iterated_genlouvain' algorithm, and tests the significance of its modularity based on a set of null models (see methods section below).
@@ -77,6 +79,7 @@ Then, we compare the distribution of Q from null models with the Q of our optimi
 The statistical significance of the modularity of the observed network (p-value) is the fraction of the 999 random matrices with a modularity value equal to or higher than the observed one.
 
 ### plot_bestg.py
+#################################################################################################################
 
 #### Description
 Python script to obtain the domain-of-optimisation plot that can be used to estimate the best gamma parameter for the modularity of a bipartite network.
@@ -92,6 +95,7 @@ The interpretation of the resulting plot is explained in:
 Weir et al. (2017). Post-Processing Partitions to Identify Domains of Modularity Optimization. Algorithms, 10:93.
 
 ### plot_AMI.py
+#################################################################################################################
 
 #### Description
 Python script to obtain a heatmap plot representing the pairwise adjusted mutual information (AMI) between the optimal partitions identified by the Champ algorithm. 
@@ -110,6 +114,7 @@ The interpretation of the resulting plot is explained in Weir et al. (2017). Pos
 Python script to obtain a graphical representation of a bipartite network (i.e. a bipartite graph) that was created with the Matlab script 'modularity_test.m'.
 
 ### H.entropy.R
+#################################################################################################################
 
 #### Description
 R function to calculate the H index of entropy of a categorical trait in a set of communities.
@@ -125,6 +130,7 @@ matrix: MxN matrix where M (rows) are community entities (e.g. interaction modul
 A vector with the H indices
 
 ### H.null.R
+#################################################################################################################
 
 #### Description
 R function to randomize a community matrix of species-level categorical trait frequencies (e.g. habitat, geographic module or genus).
@@ -144,6 +150,7 @@ weights: frequencies used as weights in the randomisation of rows. If pool = "gl
 The randomized matrix
 
 ### H.test.R
+#################################################################################################################
 
 #### Description
 R function to test for clustering of a categorical trait within communities.
@@ -185,7 +192,8 @@ rpd.obs.z Standardized effect size of rpd vs. null modules (= (rpd.obs - rpd.ran
 h.obs.p P-value (quantile) of observed H vs. null modules (= h.obs.rank / runs + 1)
 runs Number of randomizations
 
-### cast_to_matrix
+### cast_to_matrix.R
+#################################################################################################################
 
 #### Description
 R function to build a matrix of pairwise associations of two "character" variables stored in a data frame. Examples of applications:
@@ -198,7 +206,8 @@ variable1: variable that will conform the rows of the output matrix
 variable2: variable that will conform the columns of the output matrix
 pa: if pa = TRUE, the output matrix is a presences/absences matrix (0 and 1 data). If pa=FALSE (default option), it informs about the number of co-occurrences (0 and positive integers).
 
-### czscores
+### czscores.R
+#################################################################################################################
 
 #### Description
 R function to calculate the intermodular connectivity (c) and intramodular degree(z) for each node of a bipartite interaction network given a certain partition.
@@ -219,7 +228,8 @@ A list with two elements:
 c is a vector with the c values
 z is a vector with the z values
 
-### getGRS_DynamicAlpha
+### getGRS_DynamicAlpha.R
+#################################################################################################################
 
 #### Description
 R function to estimate geographic range size (GRS) of a species from occurrence data.
@@ -243,7 +253,8 @@ Object of class SpatialPolygons storing the alpha-convex hull
 EOO in km² 
 AOO in km²
 
-### int.to.com.matrix
+### int.to.com.matrix.R
+#################################################################################################################
 
 #### Description
 R function to convert an incidence matrix for bipartite networks (i.e. sp_level1 x sp_level2) into a community matrix (modules x sp) based on a partition (i.e. a vector storing module indentities of the species).
@@ -257,6 +268,7 @@ level: If level = 1, we will obtain the nri for species of level 1 (i.e rows of 
 Community matrix with MxN dimensions where M (rows) are community entities (i.e. interaction modules), and N (cols) are species of the target level.
 
 ### nfri.R
+#################################################################################################################
 
 #### Description
 R function to calculate the geographically corrected NFRI (net functional relatedness index, also called nearest relative index) for each module of a modular interaction network (for a given partition).
@@ -291,6 +303,7 @@ mpd.obs.p P-value (quantile) of observed mpd vs. null communities (= mpd.obs.ran
 runs Number of randomizations
 
 ### nfri.sp.R
+#################################################################################################################
 
 #### Description
 R function to calculate the geographically corrected NFRI (net functional relatedness index, also called nearest relative index) for each set of hosts used by a symbiont species. It can be used to analyse the diversity of host body sizes used by a symbiont species.
@@ -323,6 +336,7 @@ mpd.obs.p P-value (quantile) of observed mpd vs. null communities (= mpd.obs.ran
 runs Number of randomizations
 
 ### nri.R
+#################################################################################################################
 
 #### Description
 R function to calculate the geographically corrected NRI (net relatedness index, also called nearest relative index) for each module of a modular interaction network (for a given partition). 
@@ -355,6 +369,7 @@ mpd.obs.p P-value (quantile) of observed mpd vs. null communities (= mpd.obs.ran
 runs Number of randomizations
 
 ### null.weights.geo.R
+#################################################################################################################
 
 #### Description 
 R function to calculate a matrix of weighted probabilities of trait frequencies based on geographic availability of species in the target community.
@@ -371,6 +386,7 @@ geo_partition: vector with the geographic module identities off all the species 
 Matrix with the weighted probabilities, where rows are community entities and columns are trait variants.
 
 ### phyloSpec.rpd.R
+#################################################################################################################
 
 #### Description
 R function to calculate the RPD (relative phylogenetic distinctiveness) for each species of symbiont based on the hosts used by the symbiont.
@@ -387,6 +403,7 @@ int_mat: matrix storing the symbiont-host interactions, with host species in row
 RPD: vector with the rpd values for the species (length equal to the number of symbiont species present in the interaction matrix)
 
 ### phyloSpec.rpd_geo.R
+#################################################################################################################
 
 #### Description
 R function to calculate the geographically corrected RPD (relative phylogenetic distinctiveness) for each species of symbiont based on the hosts used by the symbiont.
@@ -406,6 +423,7 @@ geo_partition: vector storing the identity of the geographic module for each of 
 RPD_geo: vector with the geographically corrected rpd values for the modules (length equal to the number of modules of the parittion)
 
 ### rpd.R
+#################################################################################################################
 
 #### Description
 R function to calculate the RPD (relative phylogenetic distinctiveness) for each module of a modular interaction network (for a given partition).
@@ -422,6 +440,7 @@ partition: vector storing the module indentity for each of the species. The vect
 RPD: vector with the rpd values for the modules (length equal to the number of modules of the parittion)
 
 ### rpd_geo.R
+#################################################################################################################
 
 #### Description
 R function to calculate the geographically corrected RPD (relative phylogenetic distinctiveness) for each module of a modular interaction network (for a given partition).
@@ -440,7 +459,8 @@ geo_partition: vector storing the identity of the geographic module for each of 
 #### Output
 RPD_geo: vector with the geographically corrected rpd values for the modules (length equal to the number of modules of the parittion)
 
-### ses.pd.fixed
+### ses.pd.fixed.R
+#################################################################################################################
 
 #### Description
 Corrected function of ses.pd function of package picante.
@@ -449,6 +469,7 @@ Source:
 https://www.biorxiv.org/content/10.1101/579300v1.supplementary-material
 
 ### ses.pd_geo.R
+#################################################################################################################
 
 #### Description
 R function to calculate the geographically corrected version of the "standardized effect size of phylogenetic diversity" (sesPD).
@@ -481,6 +502,7 @@ pd.obs.p P-value (quantile) of observed PD vs. null communities (= mpd.obs.rank 
 #runs Number of randomizations
 
 ### ses.phyloSpec.rpd.R
+#################################################################################################################
 
 #### Description
 R function to calculate the standardised effects of RPD (relative phylogenetic distinctiveness) for each symbiont species, based on the hosts used by the symbiont.
@@ -513,6 +535,7 @@ rpd.obs.p P-value (quantile) of observed rpd vs. null modules (= rpd.obs.rank / 
 runs Number of randomizations
 
 ### ses.rpd.R
+#################################################################################################################
 
 #### Description
 R function to calculate the standardised effects of RPD (relative phylogenetic distinctiveness) for each module of a modular interaction network (for a given partition).
@@ -541,13 +564,15 @@ rpd.obs.z Standardized effect size of rpd vs. null modules (= (rpd.obs - rpd.ran
 rpd.obs.p P-value (quantile) of observed rpd vs. null modules (= rpd.obs.rank / runs + 1)
 runs Number of randomizations
 
-### sort_dist_mat
+### sort_dist_mat.R
+#################################################################################################################
 
 #### Description
 R function to sort a distance matrix (or a regular matrix)
 Source: https://rdrr.io/cran/dendextend/src/R/cor_cophenetic.R
 
-### sp.to.tfreq.matrix
+### sp.to.tfreq.matrix.R
+#################################################################################################################
 
 #### Description
 R function to convert a community matrix with species occurrences into a community matrix with frequencies of variants a categorigcal trait e.g. (geographic module, genus...).

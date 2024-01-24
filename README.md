@@ -53,10 +53,10 @@ The plot to identify the best partition can be obtained with the following scrip
 ## modularity_test.m
 
 ### Description
-Matlab script that calculates an optimised partition for a bipartite network using the 'iterated_genlouvain' algorithm, and test the significance of its modularity based on a set of null models (see methods section below).
+Matlab script that calculates an optimised partition for a bipartite network using the 'iterated_genlouvain' algorithm, and tests the significance of its modularity based on a set of null models (see methods section below).
 The null models are obtained from the following Matlab script: 1_nullModels.m
 
-We have to provide a gamma value. The best gamma value can be graphically estimated applying the CHAMP package, with the following scripts:
+We have to provide a gamma value. The best gamma value can be graphically estimated by applying the CHAMP package, with the following scripts:
 1. '1_create_null_models.m' (required for 'modularity_test.m')
 2. '2_create_network_partitions.m'
 3. '3_estimate_best_gamma.py'
@@ -70,7 +70,7 @@ Description of the fixed null model:
 In this model, each random network has the same number of connections per species as the real network. Random networks (pmatrices) are constructed using an independent swap algorithm in which the original matrix is reshuffled by repeatedly swapping 2 # 2 submatrices that preserve the row and column totals. The null model implemented in our study maintained the bipartite structure of the networks by allowing connections between hosts and symbionts and not allowing connections among hosts or among symbionts.
 For each of the 999 random matrices, we calculate the modularity (Q)
 Then, we compare the distribution of Q from null models with the Q of our optimised partition (i.e. the observed network).
-The statistical significance of the modularity of the observed network (p value) is the fraction of the 999 random matrices with a modularity value equal to or higher than the observed one.
+The statistical significance of the modularity of the observed network (p-value) is the fraction of the 999 random matrices with a modularity value equal to or higher than the observed one.
 
 ## plot_bestg.py
 
@@ -134,7 +134,7 @@ matrix: MxN matrix where M (rows) are community entities (e.g. interaction modul
 
 pool: If pool = "global", weighted probabilities are based on global pool frequencies. If pool = "community", weighted probabilities are based on community-level frequencies.
 
-weights: frequencies used as weights in the randomisation of rows. If pool = "global", weights is a vector that applies to all the communities (i.e. rows).  If pool = "community", weights is a matrix with the same dimensions than the input matrix. In this case, each community has its own probability weights (e.g. based on geographic availability of species).
+weights: frequencies used as weights in the randomisation of rows. If pool = "global", weights is a vector that applies to all the communities (i.e. rows).  If pool = "community", weights is a matrix with the same dimensions as the input matrix. In this case, each community has its own probability weights (e.g. based on geographic availability of species).
 
 ### Output
 The randomized matrix
@@ -147,13 +147,13 @@ R function to test for clustering of a categorical trait within communities.
 ### Methods:
 The function uses the Shannon entropy index (H). For each community, the function calculates the observed H (Hobs) and compare it against H values estimated based on null models (Hnull).
 
-Hipotheses:
-Null hipothesis -> Hobs = Hnull (no clustering)
-Alternative hipotehsis -> Hobs < Hnull (clustering)
+Hypotheses:
+Null hypothesis -> Hobs = Hnull (no clustering)
+Alternative hypotehsis -> Hobs < Hnull (clustering)
 
 The p-value is calculated as the proportion of null values that are below the observed value.
 
-The function provides the random mean and sd obtained from the null models. It also provide the p-value of the observed H.
+The function provides the random mean and SD obtained from the null models. It also provides the p-value of the observed H.
 
 The null models are randomisations of the matrix of trait-type frequencies. The function randomizes rows keeping row sums and using weighted probabilities based on either global frequencies or community-level frequencies.
 
@@ -167,7 +167,7 @@ matrix: MxN matrix where M (rows) are community entities (e.g. interaction modul
 
 pool: If pool = "global", weighted probabilities for null models are based on global pool frequencies. If pool = "community", weighted probabilities for null models are based on community-level frequencies.
 
-weights: frequencies used as weights in the randomisation of rows. If pool = "global", weights is a vector that applies to all the communities (i.e. rows).  If pool = "community", weights is a matrix with the same dimensions than the input matrix. In this case, each community has its own probability weights (e.g. based on geographic availability of species).
+weights: frequencies used as weights in the randomisation of rows. If pool = "global", weights is a vector that applies to all the communities (i.e. rows).  If pool = "community", weights is a matrix with the same dimensions as the input matrix. In this case, each community has its own probability weights (e.g. based on geographic availability of species).
 runs: number of randomizations
 
 ### Output
@@ -184,12 +184,12 @@ runs Number of randomizations
 ## cast_to_matrix
 
 ### Description
-R function to build a matrix of pairwise associations of two "character" variables stored in a dataframe. Examples of applications:
+R function to build a matrix of pairwise associations of two "character" variables stored in a data frame. Examples of applications:
 1. Building a site x species matrix (presence/absences)
 2. Building a co-occurrence matrix for two groups of species such as symbionts and hosts (number of co-occurrences per pairwise association)
 
 ### Parameters
-dataframe: dataframe that stores the variables to be casted
+dataframe: data frame that stores the variables to be cast
 variable1: variable that will conform the rows of the output matrix
 variable2: variable that will conform the columns of the output matrix
 pa: if pa = TRUE, the output matrix is a presences/absences matrix (0 and 1 data). If pa=FALSE (default option), it informs about the number of co-occurrences (0 and positive integers).
@@ -225,7 +225,7 @@ Extent of occurrence (EOO) based on alpha-convex hull calculated with dynamic al
 Area of occupancy (AOO) calculated with the conR package
 
 ### Input
-"data" is a dataframe with the occurrence data. It should have three columns (it is mandatory to respect column positions):
+"data" is a data frame with the occurrence data. It should have three columns (it is mandatory to respect column positions):
 The first column is the coordx
 The second column is the coordy
 The third column is the species names

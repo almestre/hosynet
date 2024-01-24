@@ -27,7 +27,6 @@ In this model, each random network has the same number of connections per specie
 Matlab function swap.m written by B. Semmens
 999 random matrices for each real network
 
-
 ### 2_create_network_partitions.m
 #################################################################################################################
 
@@ -510,7 +509,7 @@ R function to calculate the standardised effects of RPD (relative phylogenetic d
 #### Methods:
 The RPD is defined in Calatayud (2016; they provide the equation):
 First, we calculate the phylogenetic mean pairwise distances (MPD) between the taxon i and all other taxa belonging to its module (i.e., MPD i intracommunity ) minus the mean pairwise distances of taxon i and all other taxa from different modules (MPD i intercommunity ). Then, we computed relative phylogenetic distinctiveness (RPD) as the inverse of the average between all taxa in a module. Here the module represents the set of hosts used by a symbiont, and the RPD is a metric of symbiont specialization.
-For the geographically corrected version, the source of species for the null models is constrained by geographic restrictions based on a geographic partition. In this case, the mpd_inter for each species is calculate based on all the species that belong to the any of the geographic modules represented in the target community.
+For the geographically corrected version, the  of species for the null models is constrained by geographic restrictions based on a geographic partition. In this case, the mpd_inter for each species is calculate based on all the species that belong to the any of the geographic modules represented in the target community.
 
 The function provides random mean and sd obtained from null models based on randomisation of labels in the distance matrix. We also provide the z-score (z.rpd) and the p-value of the observed rpd.
 
@@ -569,7 +568,9 @@ runs Number of randomizations
 
 #### Description
 R function to sort a distance matrix (or a regular matrix)
-Source: https://rdrr.io/cran/dendextend/src/R/cor_cophenetic.R
+Source:
+
+https://rdrr.io/cran/dendextend/src/R/cor_cophenetic.R
 
 ### sp.to.tfreq.matrix.R
 #################################################################################################################

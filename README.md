@@ -84,7 +84,8 @@ The script requires the previous execution of the following Matlab and Python sc
 4. '3_estimate_best_gamma.py'
 
 The interpretation of the resulting plot is explained in:
-# Weir et al. (2017). Post-Processing Partitions to Identify Domains of Modularity Optimization. Algorithms, 10:93.
+
+Weir et al. (2017). Post-Processing Partitions to Identify Domains of Modularity Optimization. Algorithms, 10:93.
 
 ## plot_AMI.py
 
@@ -97,8 +98,7 @@ The script requires the previous execution of the following Matlab and Python sc
 3. 'modularity_test.m'
 4. '3_estimate_best_gamma.py'
 
-The interpretation of the resulting plot is explained in:
-Weir et al. (2017). Post-Processing Partitions to Identify Domains of Modularity Optimization. Algorithms, 10:93.
+The interpretation of the resulting plot is explained in Weir et al. (2017). Post-Processing Partitions to Identify Domains of Modularity Optimization. Algorithms, 10:93.
 
 ## plot_graph.py
 
@@ -350,7 +350,6 @@ mpd.obs.z Standardized effect size of mpd vs. null communities (= (mpd.obs - mpd
 mpd.obs.p P-value (quantile) of observed mpd vs. null communities (= mpd.obs.rank / runs + 1)
 runs Number of randomizations
 
-#################
 ## null.weights.geo.R
 
 ### Description 
@@ -442,6 +441,7 @@ RPD_geo: vector with the geographically corrected rpd values for the modules (le
 ### Description
 Corrected function of ses.pd function of package picante.
 Source:
+
 https://www.biorxiv.org/content/10.1101/579300v1.supplementary-material
 
 ## ses.pd_geo.R

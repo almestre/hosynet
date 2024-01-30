@@ -1,6 +1,6 @@
 # hosynet
 
-Matlab, Python and R tools for the analysis of symbiont-host interaction networks
+Matlab, Python and R tools for the analysis of symbiont-host interaction communities.
 
 ## Author
 Alexandre Mestre
